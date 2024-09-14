@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: notification
+      labels:
+        app: notification
+    spec:
+      containers:
+       - name: notification
+         image: radiocat2000/notificationservicekb:latest
+         imagePullPolicy: Always
+         ports:
+           - containerPort: 8053
+         env:
+           - name: SPRING_PROFILES_ACTIVE
+             value: kubernetes
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: notification
+

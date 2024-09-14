@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: product
+      labels:
+        app: product
+    spec:
+      containers:
+       - name: product
+         image: radiocat2000/productservicekb:latest
+         imagePullPolicy: Always
+         ports:
+           - containerPort: 8051
+         volumeMounts:
+           - name: upload-storage
+             mountPath: /uploads
+         env:
+           - name: SPRING_PROFILES_ACTIVE
+             value: kubernetes
+      restartPolicy: Always
+      volumes:
+        - name: upload-storage
+          persistentVolumeClaim:
+            claimName: local-product-upload-pvc
+  selector:
+    matchLabels:
+      app: product
+

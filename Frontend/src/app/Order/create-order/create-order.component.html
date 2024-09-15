@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="order.firstName" name="firstName" placeholder="First Name" required>
+    <input type="text" [(ngModel)]="order.lastName" name="lastName" placeholder="Last Name" required>
+    <input type="email" [(ngModel)]="order.email" name="email" placeholder="Email" required>
+    
+    <select [(ngModel)]="order.paymentMethod" name="paymentMethod">
+      <option [value]="PaymentMethod.CREDIT_CARD">Credit Card</option>
+      <option [value]="PaymentMethod.PAYPAL">PayPal</option>
+      <option [value]="PaymentMethod.BANK_TRANSFER">Bank Transfer</option>
+    </select>
+  
+    <input type="text" [(ngModel)]="order.street" name="street" placeholder="Street" required>
+    <input type="text" [(ngModel)]="order.houseNumber" name="houseNumber" placeholder="House Number" required>
+    <input type="text" [(ngModel)]="order.zipCode" name="zipCode" placeholder="Zip Code" required>
+  
+    <button type="submit">Submit Order</button>
+  </form>
+  

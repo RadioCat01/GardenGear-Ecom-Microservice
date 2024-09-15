@@ -14,7 +14,7 @@ public record OrderRequest(
 
         String reference,
 
-        @NotNull
+
         String userid,
 
         @NotNull

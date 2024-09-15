@@ -74,7 +74,7 @@ public class OrderService {
                 )
         );
 
-        return "Order Successful!";
+        return "Successfully Created Order";
     }
 
     public List<OrderResponse> findAll() {

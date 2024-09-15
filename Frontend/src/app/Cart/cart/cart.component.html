@@ -1,0 +1,22 @@
+<div class="cart-container">
+    <h2>Your Cart</h2>
+    
+    <div *ngIf="cartItems.length === 0">
+      <p>Your cart is empty.</p>
+    </div>
+    
+    <div *ngIf="cartItems.length > 0">
+      <ul>
+        <li *ngFor="let item of cartItems">
+          <div class="cart-item">
+            <span>{{ item.naame }} ({{ item.naame }} x {{ item.price | currency }})</span>
+          </div>
+        </li>
+      </ul>
+  
+      <div class="cart-total">
+        <h3>Total: {{ totalPrice | currency }}</h3>
+      </div>
+    </div>
+  </div>
+  

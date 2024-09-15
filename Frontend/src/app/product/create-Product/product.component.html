@@ -1,0 +1,34 @@
+<form (submit)="createProduct()">
+    <div>
+      <label for="name">Product Name:</label>
+      <input id="name" [(ngModel)]="productRequest.naame" name="name" required>
+    </div>
+  
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="productRequest.description" name="description" required></textarea>
+    </div>
+  
+    <div>
+      <label for="availableQuantity">Available Quantity:</label>
+      <input id="availableQuantity" type="number" [(ngModel)]="productRequest.availableQuantity" name="availableQuantity" required>
+    </div>
+  
+    <div>
+      <label for="price">Price:</label>
+      <input id="price" type="number" [(ngModel)]="productRequest.price" name="price" required>
+    </div>
+  
+    <div>
+      <label for="category">Category:</label>
+      <input id="category" [(ngModel)]="productRequest.category" name="category" required>
+    </div>
+  
+    <div>
+      <label for="image">Product Image:</label>
+      <input id="image" type="file" (change)="onImageSelected($event)" required>
+    </div>
+  
+    <button type="submit">Create Product</button>
+  </form>
+  

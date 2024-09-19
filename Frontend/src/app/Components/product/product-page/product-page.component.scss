@@ -1,0 +1,14 @@
+.page{
+  min-height: 70vh;
+  max-width: 70%;
+  padding-top: 10px;
+  border: 1px solid red;
+
+}
+.product-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  flex-direction: row;
+  padding: 10px;
+  gap: 10px;
+}

@@ -1,16 +1,63 @@
 .product-card{
-  border: 1px solid black;
-  width: 27vh;
-  margin: 10px;
-  height: 340px;
+    width: 27vh;
+    margin: 10px;
+    height: 354px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  .product-card:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  .product-image{
+    padding: 1px;
+    width: 100%;
+    height: 65%;
+  }
+  .content{
+    margin-top: -20px;
+    padding: 10px 10px 10px 10px;
+    font-size: 10px;
 
-}
-.product-image{
-  padding: 1px;
-  width: 100%;
-  height: 65%;
-}
-.content{
-  font-size: 10px;
-  line-height: 0px;
-}
+  }
+  h5{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'poppins';
+  }
+  .footer{
+    width: 90%;
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -12px;
+  }
+  .price{
+    font-size: 16px;
+    color: #23b223;
+    font-weight: 700;
+  }
+  .des{
+    margin-bottom: 8px;
+    margin-top: -16px;
+    font-weight:400;
+    font-size: 12px;
+    font-family: poppins;
+  }
+  button{
+    background-image: url('https://media.istockphoto.com/id/898475764/vector/shopping-trolley-cart-icon-in-green-circle-vector.jpg?s=612x612&w=0&k=20&c=W_b90qFRpj_FyLyI19xWqB6EoNSuJYwMSN9nnKkE9Hk=');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: -2px;
+  }

@@ -1,6 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export interface ProductRequest{
   naame: string;
@@ -23,7 +23,6 @@ export interface ProductResponse {
   providedIn: 'root'
 })
 export class ProductService {
-
   private postUrl = 'http://localhost:8051/products';
   private getUrl =  'http://localhost:8051/products';
 
@@ -40,5 +39,4 @@ export class ProductService {
   getAllProducts():Observable<ProductResponse[]>{
     return this.http.get<ProductResponse[]>(this.getUrl);
   }
-
 }

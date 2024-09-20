@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { OrderRequest, OrderService, PaymentMethod, PurchaseRequest } from '../order-Service/order.service';
-import { CartService } from '../../Cart/cart-Service/cart.service';
+import { OrderRequest, OrderService, PaymentMethod, PurchaseRequest } from '../order-service/order.service';
+import { CartService } from '../../cart/cart-service/cart.service';
 
 @Component({
-  selector: 'app-create-order',
-  templateUrl: './create-order.component.html',
-  styleUrl: './create-order.component.scss'
+  selector: 'app-create-prder',
+  templateUrl: './create-prder.component.html',
+  styleUrl: './create-prder.component.scss'
 })
-export class CreateOrderComponent {
-
+export class CreatePrderComponent {
   PaymentMethod = PaymentMethod;
 
   order: OrderRequest = {
@@ -27,9 +26,9 @@ export class CreateOrderComponent {
 
   constructor(
     private orderService:OrderService,
-    private cartService:CartService
+    private cartService: CartService
   ){}
-  
+
   onSubmit():void{
 
     const totalPrize = this.cartService.getTotalPrice();
@@ -54,5 +53,4 @@ export class CreateOrderComponent {
   )
 
   }
-
 }

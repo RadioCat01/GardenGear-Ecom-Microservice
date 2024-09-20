@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ProductResponse } from '../../product/product-Service/product.service';
-import { CartService } from '../cart-Service/cart.service';
+import { ProductResponse } from '../../product/product-service/product.service';
+import { CartService } from '../cart-service/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -20,4 +20,5 @@ export class CartComponent {
       this.totalPrice = this.cartService.getTotalPrice();
     });
   }
+
 }

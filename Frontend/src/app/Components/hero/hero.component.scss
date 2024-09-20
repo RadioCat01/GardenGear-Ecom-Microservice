@@ -1,0 +1,181 @@
+.img{
+    position: relative;
+    margin-top: 80px;
+    background-image:
+      linear-gradient(
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.2)
+      ),
+      url('https://www.ecowatch.com/wp-content/uploads/2021/12/2033552514-origin.jpg');
+    background-size: cover;
+    background-position: 30% 65%;
+    width: 1424px;
+    margin-left: -8px;
+    height: 50vh;
+
+    .Name {
+      font-size: 70px;
+      font-weight: 600;
+      color: lavenderblush;
+
+      span{
+        font-size: 70px;
+        color: papayawhip;
+      }
+    }
+  }
+
+  .main{
+    position: absolute;
+    top: 60px;
+    left: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .topic-footer{
+    top: 135px;
+    left: 308px;
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: poppins;
+  }
+  .logo{
+    background-image: url('/logo.png');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    margin-right: -40px;
+  }
+
+
+
+
+
+
+
+
+  .nav{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1424px;
+    margin-left: -8px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 10px;
+    color: black;
+    font-weight: 500;
+    margin-left: 40px;
+    font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .buttons{
+    width: 250px;
+    display: flex;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+    button{
+
+    }
+  }
+  .custom-cart-button {
+    position: relative;
+    padding: 10px 20px;
+  }
+
+  .mat-badge-content {
+    color: red;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+  }
+
+  .links{
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    a{
+      font-family: 'poppins';
+      text-decoration: none;
+      display: flex;
+      margin-left: 30px;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 400;
+      height: 20px;
+      padding-left: 6px;
+      padding-right: 6px;
+      color: #222121;
+    }
+    margin-right: -300px;
+  }
+
+  .custom-cart-button{
+    background-image: url('https://media.istockphoto.com/id/898475764/vector/shopping-trolley-cart-icon-in-green-circle-vector.jpg?s=612x612&w=0&k=20&c=W_b90qFRpj_FyLyI19xWqB6EoNSuJYwMSN9nnKkE9Hk=');
+    background-size: cover;
+    border: none;
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .search-container {
+    margin-left: 34px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 40px;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .search-input {
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+  }
+
+  .search-button {
+    background-image: url('/search.png');
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 16px;
+    background-color: transparent;
+  }
+

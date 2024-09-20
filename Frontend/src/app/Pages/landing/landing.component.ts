@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ProductResponse, ProductService} from "../../Components/product/product-Service/product.service";
-import {Router} from "@angular/router";
+import { ProductResponse, ProductService } from '../../Components/product/product-service/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -8,7 +8,6 @@ import {Router} from "@angular/router";
   styleUrl: './landing.component.scss'
 })
 export class LandingComponent {
-
   products: ProductResponse[] = [];
 
   constructor(

@@ -1,6 +1,6 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
-import { ProductResponse } from '../product-Service/product.service';
-import { CartService } from '../../Cart/cart-Service/cart.service';
+import { ProductResponse } from '../product-service/product.service';
+import { CartService } from '../../cart/cart-service/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -8,7 +8,6 @@ import { CartService } from '../../Cart/cart-Service/cart.service';
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
-
   @Input() product!: ProductResponse;
 
   price:number=0;
@@ -30,5 +29,4 @@ export class ProductCardComponent {
   addToCart() {
     this.cartService.addToCart(this.product);
   }
-
 }

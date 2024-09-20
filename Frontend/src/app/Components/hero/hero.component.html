@@ -1,0 +1,23 @@
+<div class="nav">
+    <div class="search-container">
+      <input type="text" placeholder="Search..." class="search-input">
+      <button class="search-button"></button>
+  </div>
+  <div class="links">
+    <a routerLink="/landing" fragment="">Electronics</a>
+    <a routerLink="/landing" fragment="">PowerTools</a>
+    <a routerLink="/landing" fragment="">About</a>
+  </div>
+  <div class="buttons">
+    <button matBadge="{{cartItemCount > 0 ? cartItemCount : null}}" class="custom-cart-button"></button>
+    <button class="logout">Log Out</button>
+  </div>
+</div>
+
+<div class="img">
+  <div class="main">
+     <div class="logo"></div>
+     <div class="Name"><span>G</span>arden<span>G</span>ear</div>
+     <span class="topic-footer">PowerTools PVT. LTD Sri Lanka</span>
+  </div>
+</div>

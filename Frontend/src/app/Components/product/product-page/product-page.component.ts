@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductService, ProductResponse } from '../product-Service/product.service';
-
+import { ProductResponse, ProductService } from '../product-service/product.service';
 
 @Component({
   selector: 'app-product-page',
@@ -8,7 +7,6 @@ import { ProductService, ProductResponse } from '../product-Service/product.serv
   styleUrl: './product-page.component.scss'
 })
 export class ProductPageComponent {
-
   products: ProductResponse[] = [];
 
   constructor(private productService: ProductService){}
@@ -28,5 +26,4 @@ export class ProductPageComponent {
       }
     });
   }
-
 }

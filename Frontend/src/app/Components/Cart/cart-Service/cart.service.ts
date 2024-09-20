@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { ProductRequest, ProductResponse } from '../../product/product-Service/product.service';
+import { ProductResponse } from '../../product/product-service/product.service';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +21,4 @@ export class CartService {
   getTotalPrice(): number {
     return this.cartItems.value.reduce((total, product) => total + product.price, 0);
   }
-  
 }

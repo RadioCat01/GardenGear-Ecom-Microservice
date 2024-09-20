@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { ProductService, ProductRequest } from '../product-Service/product.service';
+import { ProductRequest, ProductService } from '../product-service/product.service';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrl: './product.component.scss'
+  selector: 'app-create-product',
+  templateUrl: './create-product.component.html',
+  styleUrl: './create-product.component.scss'
 })
-export class ProductComponent {
-
+export class CreateProductComponent {
   constructor(private productService: ProductService){}
 
   productRequest: ProductRequest = {
@@ -42,5 +41,4 @@ export class ProductComponent {
       console.error('Image file not selected');
     }
   }
-
 }

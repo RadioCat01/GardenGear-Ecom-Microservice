@@ -23,8 +23,8 @@ export interface ProductResponse {
   providedIn: 'root'
 })
 export class ProductService {
-  private postUrl = 'http://product.default.svc.cluster.local/products';
-  private getUrl =  'http://product.default.svc.cluster.local/products';
+  private postUrl = 'http://myapp.local/products';
+  private getUrl =  'http://myapp.local/products';
 
   constructor(private http: HttpClient) { }
 

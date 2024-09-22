@@ -56,11 +56,11 @@ services:
       - 1080:1080
       - 1025:1025
 
-  portfolio:
-    container_name: portfolio
-    image: portfolio:dev
+  frontend:
+    container_name: frontend
+    image: radiocat2000/frontend
     ports:
-      - "5173:5173"
+      - 8080:80
 
 networks:
   k8s-net:

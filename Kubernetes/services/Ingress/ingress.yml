@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-app-ingress
+spec:
+  rules:
+    - host: myapp.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: angular-frontend
+                port:
+                  number: 80
+          - path: /products
+            pathType: Prefix
+            backend:
+              service:
+                name: product
+                port:
+                  number: 80

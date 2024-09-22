@@ -45,8 +45,8 @@ export interface OrderRequest{
 })
 export class OrderService {
 
-  private createOrderUrl = 'http://order.default.svc.cluster.local/orders';
-  private getOrdersUrl = 'http://order.default.svc.cluster.local/orders';
+  private createOrderUrl = 'http://myapp.local/orders';
+  private getOrdersUrl = 'http://myapp.local/orders';
 
   constructor(private http: HttpClient) { }
 

@@ -1,4 +1,4 @@
-FROM node:16 as build
+FROM node:18 as build-stage
 
 WORKDIR /app
 
@@ -8,12 +8,12 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build --prod
+RUN npm run build
 
 FROM nginx:alpine
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-COPY --from=build /app/dist/frontend /usr/share/nginx/html
+COPY --from=build-stage /app/dist/frontend/browser /usr/share/nginx/html
 
 EXPOSE 80

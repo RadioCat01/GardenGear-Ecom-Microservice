@@ -23,8 +23,8 @@ export interface ProductResponse {
   providedIn: 'root'
 })
 export class ProductService {
-  private postUrl = 'http://localhost:8051/products';
-  private getUrl =  'http://localhost:8051/products';
+  private postUrl = 'http://product.default.svc.cluster.local/products';
+  private getUrl =  'http://product.default.svc.cluster.local/products';
 
   constructor(private http: HttpClient) { }
 
@@ -38,5 +38,9 @@ export class ProductService {
 
   getAllProducts():Observable<ProductResponse[]>{
     return this.http.get<ProductResponse[]>(this.getUrl);
+  }
+
+  getProductById(id: string | null): Observable<ProductResponse> {
+    return this.http.get<ProductResponse>(`${this.getUrl}/${id}`);
   }
 }

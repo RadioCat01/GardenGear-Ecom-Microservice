@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CartService } from '../cart/cart-service/cart.service';
 import { ProductResponse } from '../product/product-service/product.service';
+import {CartComponent} from "../cart/cart/cart.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-hero',
@@ -12,6 +14,7 @@ export class HeroComponent {
 
   constructor(
     private cartService: CartService,
+    public dialog: MatDialog,
   ) {
   }
 
@@ -22,11 +25,9 @@ export class HeroComponent {
     });
   }
 
-  /*openDialog() {
-    this.dialog.open(CreateOrderComponent,{
-      width:'600px',
-      height: '500px'
+  openDialog() {
+    this.dialog.open(CartComponent,{
     });
-  } */
+  }
 
 }

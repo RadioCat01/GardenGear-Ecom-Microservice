@@ -1,5 +1,5 @@
-<div class="product-card">
-    <img [src]="getImageUrl(product.imagePath)" alt="{{product.naame}}" class="product-image">
+<div class="product-card" >
+    <img (click)="onProductClick()" [src]="getImageUrl(product.imagePath)" alt="{{product.naame}}" class="product-image">
    <div class="content">
     <h5>{{ product.naame }}</h5>
     <p class="des">{{ product.description }}</p>

@@ -9,7 +9,7 @@
     <a routerLink="/landing" fragment="">About</a>
   </div>
   <div class="buttons">
-    <button matBadge="{{cartItemCount > 0 ? cartItemCount : null}}" class="custom-cart-button"></button>
+    <button (click)="openDialog()"  matBadge="{{cartItemCount > 0 ? cartItemCount : null}}" class="custom-cart-button"></button>
     <button class="logout">Log Out</button>
   </div>
 </div>

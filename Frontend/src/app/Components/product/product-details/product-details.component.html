@@ -1,0 +1,53 @@
+<app-hero></app-hero>
+<div class="page">
+  <app-midside></app-midside>
+<div class="product-details">
+  <img [src]="getImageUrl(product.imagePath)" alt="{{product.naame}}" class="product-image">
+  <div class="content">
+  <h1>{{ product.naame }}</h1>
+  <p class="a">{{ product.description }}</p>
+    <p class="b">{{product.category}}</p>
+    <div class="price">
+    <p> ${{product.price}}</p>
+    <button (click)="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<div class="footer-dev">
+  <div class="fot">
+    <div class="about">
+      <h3>Lawnmowers & Garden Tools</h3>
+      <p>
+        Your one-stop shop for all lawnmowers and garden tools. We provide high-quality, reliable equipment for all your gardening needs.
+      </p>
+    </div>
+
+    <div class="links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/shop">Shop</a></li>
+        <li><a routerLink="/blog">Blog</a></li>
+        <li><a routerLink="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <h4>Follow Us</h4>
+      <a href="https://facebook.com" target="_blank">www.Facebook.com</a>
+      <a href="https://instagram.com" target="_blank">www.Instagram.com</a>
+      <a href="https://twitter.com" target="_blank">www.twitter.com</a>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 LawnMowers & Garden Tools | All Rights Reserved</p>
+  </div>
+
+</div>

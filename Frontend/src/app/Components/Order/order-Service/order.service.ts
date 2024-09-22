@@ -26,29 +26,18 @@ export interface PurchaseRequest {
 }
 
 export interface OrderRequest{
-  id?: number; 
-  
+  id?: number;
   reference: string;
-  
-  userid: string; 
-  
+  userid: string;
   firstName: string;
-  
-  lastName: string; 
-  
-  email: string; 
-  
-  amount: number; 
-  
-  paymentMethod: PaymentMethod; 
-  
-  products: PurchaseRequest[]; 
-  
-  street: string; 
+  lastName: string;
+  email: string;
+  amount: number;
+  paymentMethod: PaymentMethod;
+  products: PurchaseRequest[];
+  street: string;
   houseNumber: string;
-  
-  zipCode: string; 
-
+  zipCode: string;
 }
 
 @Injectable({
@@ -56,8 +45,8 @@ export interface OrderRequest{
 })
 export class OrderService {
 
-  private createOrderUrl = 'http://localhost:8052/orders';
-  private getOrdersUrl = 'http://localhost:8052/orders';
+  private createOrderUrl = 'http://order.default.svc.cluster.local/orders';
+  private getOrdersUrl = 'http://order.default.svc.cluster.local/orders';
 
   constructor(private http: HttpClient) { }
 

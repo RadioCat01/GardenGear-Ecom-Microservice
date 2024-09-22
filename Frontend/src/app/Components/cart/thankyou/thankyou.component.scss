@@ -1,0 +1,48 @@
+/* Common Container Styling */
+.dialog-container {
+  min-width: 300px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Title Styling */
+.dialog-title {
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Content Styling */
+.dialog-content {
+  font-size: 18px;
+  color: #0b311c;
+  margin-bottom: 20px;
+}
+
+/* Action Button Styling */
+.dialog-button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dialog-button:hover {
+  background-color: #45A049;
+}
+
+.dialog-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}

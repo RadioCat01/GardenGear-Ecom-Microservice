@@ -36,7 +36,7 @@
   }
   .topic-footer{
     top: 135px;
-    left: 308px;
+    left: 290px;
     position: absolute;
     color: white;
     font-size: 16px;
@@ -91,30 +91,18 @@
     width: 250px;
     display: flex;
     margin-left: 20px;
-    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 50px;
 
-    button{
+  }
 
-    }
-  }
-  .custom-cart-button {
-    position: relative;
-    padding: 10px 20px;
-  }
 
   .mat-badge-content {
     color: red;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: -10px;
-    right: -10px;
+    font-weight: 700;
+    background-color: transparent;
   }
 
   .links{
@@ -128,7 +116,7 @@
       margin-left: 30px;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       height: 20px;
       padding-left: 6px;
@@ -142,8 +130,8 @@
     background-image: url('https://media.istockphoto.com/id/898475764/vector/shopping-trolley-cart-icon-in-green-circle-vector.jpg?s=612x612&w=0&k=20&c=W_b90qFRpj_FyLyI19xWqB6EoNSuJYwMSN9nnKkE9Hk=');
     background-size: cover;
     border: none;
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
   }
 
 

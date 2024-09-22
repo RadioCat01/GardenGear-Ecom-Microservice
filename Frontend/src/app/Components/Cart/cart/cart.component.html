@@ -1,22 +1,26 @@
 <div class="cart-container">
-    <h2>Your Cart</h2>
-    
-    <div *ngIf="cartItems.length === 0">
-      <p>Your cart is empty.</p>
-    </div>
-    
-    <div *ngIf="cartItems.length > 0">
-      <ul>
-        <li *ngFor="let item of cartItems">
-          <div class="cart-item">
-            <span>{{ item.naame }} ({{ item.naame }} x {{ item.price | currency }})</span>
-          </div>
-        </li>
-      </ul>
-  
-      <div class="cart-total">
-        <h3>Total: {{ totalPrice | currency }}</h3>
+  <h3 class="title">Place Your Order !</h3>
+  <form (ngSubmit)="onSubmit()" class="order-form">
+      <input class="form-input" [(ngModel)]="order.firstName" name="firstName" placeholder="First Name" required>
+      <input class="form-input" [(ngModel)]="order.lastName" placeholder="Last Name" name="lastName" required>
+      <input class="form-input" [(ngModel)]="order.email" placeholder="Email" name="email" type="email" required>
+      <input class="form-input" [(ngModel)]="order.houseNumber" placeholder="House Number" name="houseNumber" required>
+      <input class="form-input" [(ngModel)]="order.street" name="street" required placeholder="Street">
+      <input class="form-input" [(ngModel)]="order.zipCode" name="zipCode" required placeholder="ZipCode">
+      <select class="form-input" [(ngModel)]="order.paymentMethod" name="paymentMethod">
+        <option value="PAYPAL">Paypal</option>
+        <option value="CREDIT_CARD">Credit Card</option>
+      </select>
+
+    <div *ngIf="cartItems.length > 0" class="cart-items">
+      <div *ngFor="let item of cartItems" class="cart-item">
+        <p>{{ item.naame }} - {{ item.price | currency }}</p>
       </div>
     </div>
-  </div>
-  
+    <div class="total-price">
+      <p>Total:<span>{{ order.amount | currency }}</span></p>
+    </div>
+    <button class="submit-button" type="submit">Proceed</button>
+
+  </form>
+</div>

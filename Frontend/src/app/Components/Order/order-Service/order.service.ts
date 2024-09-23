@@ -45,8 +45,8 @@ export interface OrderRequest{
 })
 export class OrderService {
 
-  private createOrderUrl = 'http://myapp.local/orders';
-  private getOrdersUrl = 'http://myapp.local/orders';
+  private createOrderUrl = 'http://localhost:8052/orders';
+  private getOrdersUrl = 'http://localhost:8052/orders';
 
   constructor(private http: HttpClient) { }
 

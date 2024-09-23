@@ -3,8 +3,9 @@ kind: Service
 metadata:
   name: order
 spec:
+  type: LoadBalancer
   selector:
     app: order
   ports:
-    - port: 80
+    - port: 8052
       targetPort: 8052

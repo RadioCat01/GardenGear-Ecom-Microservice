@@ -23,8 +23,8 @@ export interface ProductResponse {
   providedIn: 'root'
 })
 export class ProductService {
-  private postUrl = 'http://myapp.local/products';
-  private getUrl =  'http://myapp.local/products';
+  private postUrl = 'http://loaclhost:8051/products';
+  private getUrl =  'http://localhost:8051/products';
 
   constructor(private http: HttpClient) { }
 

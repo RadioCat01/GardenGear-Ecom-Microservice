@@ -3,8 +3,10 @@ kind: Service
 metadata:
   name: product
 spec:
+  type: LoadBalancer
   selector:
     app: product
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 8051
       targetPort: 8051

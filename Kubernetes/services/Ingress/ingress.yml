@@ -1,20 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-app-ingress
+  name: product-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: myapp.local
+    - host: product.com
       http:
         paths:
           - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: angular-frontend
-                port:
-                  number: 80
-          - path: /products
             pathType: Prefix
             backend:
               service:

@@ -8,6 +8,6 @@ spec:
     app: angular-frontend
   ports:
     - protocol: TCP
-      port: 80
+      port: 8088
       targetPort: 80
 
